@@ -1,0 +1,72 @@
+
+                             power
+
+A suite of Splus/R functions to compute power and sample size for
+tests of the general linear hypothesis.  The functions use the
+power approximations of Muller and Peterson (1984).  These
+functions allow you to compute the approximate power of tests of
+the null hypothesis
+
+		H0: c%*%beta%*%u - theta0 = 0,
+
+in the model
+
+		     y = x%*%beta + e.
+
+Here y(Nxp) is the matrix of responses, x(Nxq) is the design
+matrix, beta(qxp) is the true parameter, and e(Nxp) is a matrix
+of errors whose rows are independent draws from the multivariate
+normal distribution with mean 0 and variance matrix sigma(pxp).
+The functions also provide for computation of the minimum sample
+size needed to achieve a given level of power.
+
+To install (S-Version), go to a likely directory and type `sh filename'
+(without the quotes), where `filename' is the file in which you've
+stored this shell archive.  This will place 7 files in your
+directory:
+
+1.  power.README (this file)
+2.  power.fcn (containing the functions)
+3.  powertst.S (some numerical examples)
+4.  pfnc.d (documentation for the noncentral F function)
+5.  pchisqnc.d (documentation for the noncentral chi^2 function)
+6.  glhpwr.d (documentation for the power function)
+7.  sscomp.d (documentation for the sample size function).
+
+Files ending in .d are help() files, and should be moved into a
+.Data/.Help directory; see prompt() in the S manual.  To
+accommodate different styles of use, I leave storage details to
+the user.
+
+The functions were written entirely in Splus versions 3.0 and 2.3
+on a Sun SPARCstation 1 running SunOS release 4.1; they have not
+been tested under any other conditions.  The author is willing to
+help with problems.  Send email to dheitjan@biostats.hmc.psu.edu
+on Internet.
+
+The R-version is installed via 'R INSTALL hpower'. It worked without 
+problems on a linux machine (kernel 2.0.33). The R-package has been
+renamed to hpower because a function 'power' already exists. 
+
+
+
+REFERENCE
+
+Muller, K.E. and Peterson, B.L. (1984).  Practical methods for
+computing power in testing the multivariate general linear
+hypothesis.  Computational Statistics and Data Analysis 2,
+143--158.
+
+Written by Daniel F. Heitjan (dheitjan@peter.cpmc.columbia.edu).
+
+COPYRIGHT NOTICE
+
+These functions are not copyrighted.  The author requests,
+however, that you acknowledge the source and communicate any
+improvements to him.
+
+PS.: Dr. Heitjan kindly allowed a port to be made and to be posted 
+     to CRAN on 07-16-1999 (contacted by  email). S.F.
+ 
+     No changes to the sourcecode were necessary, just the conversion of
+     the help pages.
